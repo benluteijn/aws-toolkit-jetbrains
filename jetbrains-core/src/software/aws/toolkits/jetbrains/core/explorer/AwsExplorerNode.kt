@@ -49,7 +49,7 @@ class AwsExplorerRootNode(project: Project) :
     }
 }
 
-abstract class AwsExplorerServiceRootNode(project: Project, value: String, awsIcon: Icon) :
+abstract class AwsExplorerServiceRootNode(project: Project, value: String, awsIcon: Icon?) :
         AwsExplorerNode<String>(project, value, awsIcon) {
     private val childNodes: MutableList<AwsExplorerNode<*>> by lazy {
         val initialList = mutableListOf<AwsExplorerNode<*>>()

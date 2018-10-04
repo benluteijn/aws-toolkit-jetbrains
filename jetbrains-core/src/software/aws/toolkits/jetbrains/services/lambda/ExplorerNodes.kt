@@ -19,7 +19,7 @@ import software.aws.toolkits.jetbrains.core.explorer.AwsTruncatedResultNode
 import software.aws.toolkits.resources.message
 
 class LambdaServiceNode(project: Project) :
-    AwsExplorerServiceRootNode(project, message("lambda.service_name"), AwsIcons.Logos.LAMBDA) {
+    AwsExplorerServiceRootNode(project, message("lambda.service_name"), null) {
     override fun serviceName() = LambdaClient.SERVICE_NAME
 
     private val client: LambdaClient = AwsClientManager.getInstance(project).getClient()
